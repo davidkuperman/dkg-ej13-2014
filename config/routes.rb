@@ -8,6 +8,7 @@ Ej13::Application.routes.draw do
   root 'static_pages#home'
   match '/about', to: 'static_pages#about', via: 'get' 
   match '/home', to: 'static_pages#home', via: 'get' 
+  match '/signup', to: 'users#new', via: 'get' 
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -16,7 +17,7 @@ Ej13::Application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+     resources :users
 
   # Example resource route with options:
   #   resources :products do
